@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(31, 30, 30);
+}
+
+ul,
+nav {
+  list-style: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 80px;
+}
+
+.our-team-section,
+.contact-section {
+  background-color: rgb(230, 230, 230);
+}
+
+.content-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Home page styles */
+
+.nav-link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  opacity: 0.77;
+  color: #fff;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+a.btn {
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;  
+  padding: 15px 35px;
+  background-color: #1863db;
+  opacity: 1;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+
+a.btn:hover {
+  opacity: 0.96;
+}
+
+
+.heading {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 45px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.9;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  text-align: center;
+
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 90px;
+  animation: 1.5s fadeIn forwards;
+  opacity: 0;
+  color: #fff;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+header h1 {
+  text-shadow: 2px 1px 0px rgba(255, 255, 255, 1);
+  color: #fbd040;
+}
+
+header nav {
+  display: flex;
+  margin-right: -15px;
+}
+
+header nav li {
+  margin: 0 15px;
+}
+
+.home-section {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.bg-img-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to left,
+      rgba(12, 12, 12, 0.3),
+      rgba(12, 12, 12, 0.3)
+    ),
+    url("images/main-background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.home-section h1 {
+  font-size: 75px;
+  text-shadow: 3px 3px 0px rgba(39, 39, 39, 0.4);
+}
+
+.home-section h3 {
+  margin-bottom: 40px;
+  font-size: 27px;
+  text-shadow: 3px 3px 0px rgba(39, 39, 39, 0.4);
+}
+
+.intro-text {
+  opacity: 0;
+  margin-top: 200px;
+  animation: slide-up 1.5s forwards;
+}
+
+@keyframes slide-up {
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+
+/* Services section styles */
+
+.service {
+  height: 300px;
+  padding: 20px;
+  flex-basis: 30%;
+  text-align: center;
+}
+
+.service h2 {
+  margin-bottom: 15px;
+}
+
+.icon-area i {
+  font-size: 28px;
+  padding: 25px;
+  color: #fff;
+}
+
+.icon-area {
+  width: 85px;
+  height: 80px;
+  display: inline-block;
+  background-color: #262626;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 842px) {
+  header {
+    flex-direction: column;
+    padding: 20px 50px;
+  }
+  header h1 {
+    margin-bottom: 15px;
+  }
+  header nav li {
+    margin: 0 7px;
+  }
+  .home-section {
+    min-height: 600px;
+  }
+  .home-section h1 {
+    font-size: 45px;
+  }
+  .home-section h3 {
+    font-size: 24px;
+  }
+  a.btn {
+    padding: 10px 20px;
+  }
+  .heading {
+    font-size: 36px;
+  }
+}
+
+
+@media (max-width: 804px) {
+   .service {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 407px) {
+  .service {
+    margin-bottom: 160px;
+  }
+}
+
+
+/* Our team section styles */
+
+.our-team-section .content-section li {
+  padding: 5px;
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.our-team-section img {
+  width: 95%;
+}
+
+/* Media Queries */
+
+@media (max-width: 1035px) {
+  .our-team-section .content-section li {
+    flex-basis: 50%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-team-section .content-section li {
+    flex-basis: 100%;
+    padding: 10px;
+  }
+}
+
+.our-team-section .content-section h5 {
+  margin: 5px;
+  font-size: 0.85rem;
+}
+
+/* Newsletter section styles */
+
+.newsletter-section form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.newsletter-section form input {
+  padding: 10px;
+  margin-right: 30px;
+  font-size: 18px;
+  color: #666;
+  flex: 1;
+  border: 1px solid #000;
+}
+
+/* Media Queries */
+
+@media (max-width: 923px) {
+  .newsletter-section form input {
+    flex-basis: 100%;
+    margin: 0 0 20px 0;
+  }
+}
+
+/* Contact section styles */
+
+.contact-section .content-section .contact-side {
+  height: 450px;
+  padding: 20px;
+  flex-basis: 40%;
+  text-align: center;
+}
+
+.our-contact-info i {
+  font-size: 35px;
+  padding: 2px;
+}
+
+.contact-form h4 {
+  font-size: 23px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.contact-form input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #525151;
+}
+
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #525151;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.contact-form input[type="submit"] {
+  font-size: 16px;
+  background: #1863db;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 1;
+  padding: 10px 35px;
+
+}
+
+.contact-form input[type="submit"]:hover {
+  opacity: 0.96;
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+  .contact-section .content-section .contact-side {
+    flex-basis: 100%;
+  }
+}
+
+/* Styles for back to top button */
+
+#back-to-top-btn {
+  position: fixed;
+  bottom: 8px;
+  right: 20px;
+  width: 40px;
+  display: none;
+  height: 40px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  border: 3px solid #1863db;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+  background-color: rgb(214, 214, 214);
+  color: #000;
+}
+
+/* Footer section styles */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #262626;
+  color: #fff;
+  padding: 20px 0;
+}
+
+footer p {
+  text-transform: uppercase;
+  font-size: 13px;
+  opacity: 0.8;
+  align-self: center;
+}
+
+footer a {
+  font-size: 17px;
+}
+
+/* Media Queries */
+
+@media (max-width: 500px) {
+  footer p {
+    width: 50%;
+    text-align: center;
+  }
+
+  #back-to-top-btn {
+    bottom: 23px;
+  }
+}
